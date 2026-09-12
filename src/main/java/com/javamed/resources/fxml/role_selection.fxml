@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="18.0" prefWidth="440.0" prefHeight="460.0"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.javamed.controllers.RoleSelectionController"
+      style="-fx-background-color: #f4f6f8; -fx-padding: 40;">
+
+    <Label text="JavaMed Health System" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+    <Label text="Select your role to access the portal:" style="-fx-font-size: 13px; -fx-text-fill: #7f8c8d;"/>
+
+    <Button text="Doctor / Healthcare Provider" onAction="#handleSelectDoctor" prefWidth="300" prefHeight="45"
+            style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;"/>
+
+    <Button text="Patient Portal" onAction="#handleSelectPatient" prefWidth="300" prefHeight="45"
+            style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;"/>
+
+    <Button text="System Administrator" onAction="#handleSelectAdmin" prefWidth="300" prefHeight="45"
+            style="-fx-background-color: #34495e; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;"/>
+
+    <Separator prefWidth="300">
+        <VBox.margin>
+            <Insets top="10" bottom="5"/>
+        </VBox.margin>
+    </Separator>
+
+    <Hyperlink text="Already have an account? Direct Sign In" onAction="#handleBackToLogin" style="-fx-font-size: 12px;"/>
+</VBox>

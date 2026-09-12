@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="15.0" prefWidth="420.0" prefHeight="480.0"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.javamed.controllers.LoginController"
+      style="-fx-background-color: #f8fafc; -fx-padding: 35;">
+
+    <Label text="JavaMed Health System" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1e293b;"/>
+    <Label fx:id="portalTitleLabel" text="Secure Portal Access" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #3b82f6;"/>
+
+    <VBox spacing="8.0" alignment="CENTER_LEFT" maxWidth="300">
+        <Label text="Username:"/>
+        <TextField fx:id="usernameField" promptText="Enter username"/>
+        
+        <Label text="Password:"/>
+        <PasswordField fx:id="passwordField" promptText="Enter password"/>
+    </VBox>
+
+    <Label fx:id="errorLabel" textFill="#ef4444" wrapText="true" maxWidth="300" style="-fx-font-size: 11px;"/>
+
+    <Button text="Sign In" onAction="#handleLogin" defaultButton="true" prefWidth="300" prefHeight="38"
+            style="-fx-background-color: #2563eb; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+
+    <Hyperlink text="← Back to Role Selection" onAction="#handleBackToRoleSelect" style="-fx-font-size: 12px;"/>
+</VBox>

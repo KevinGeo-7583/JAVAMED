@@ -1,0 +1,112 @@
+/* Global Color Variables & Root Styles */
+/* Apply image directly to root */
+.root {
+    -fx-font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    -fx-background-image: url('../images/hospital.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
+
+/* Semi-transparent frosted glass card over the image */
+.glass-card {
+    -fx-background-color: rgba(255, 255, 255, 0.90);
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 20, 0.15, 0, 8);
+}
+/* Typography */
+.heading-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-primary-dark;
+}
+
+.sub-title {
+    -fx-font-size: 13px;
+    -fx-text-fill: -fx-text-muted;
+}
+
+/* Form Controls: TextFields & PasswordFields */
+.text-field, .password-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: -fx-border-color-default;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 10px 14px;
+    -fx-font-size: 13px;
+    -fx-text-fill: -fx-text-main;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: -fx-primary;
+    -fx-effect: dropshadow(three-pass-box, rgba(30, 136, 229, 0.25), 6, 0.2, 0, 0);
+}
+
+/* Primary Action Button */
+.btn-primary {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 11px 24px;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: -fx-primary-dark;
+}
+
+.btn-primary:pressed {
+    -fx-background-color: #0d47a1;
+}
+
+/* Sidebar Navigation (For Dashboard) */
+.sidebar {
+    -fx-background-color: #1a252f;
+}
+
+.sidebar-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ecf0f1;
+    -fx-alignment: BASELINE_LEFT;
+    -fx-font-size: 14px;
+    -fx-padding: 12px 20px;
+    -fx-cursor: hand;
+}
+
+.sidebar-btn:hover {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #ffffff;
+}
+/* Background Image Container */
+.bg-medical {
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+/* Semi-transparent frosted glass card over the background */
+.glass-card {
+    -fx-background-color: rgba(255, 255, 255, 0.88);
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 20, 0.15, 0, 8);
+    -fx-padding: 35px;
+}
+/* Input Error State */
+.input-error {
+    -fx-border-color: #e53935;
+    -fx-border-width: 1.5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(229, 57, 53, 0.3), 6, 0.2, 0, 0);
+}
+
+/* Success Label */
+.label-success {
+    -fx-text-fill: #2e7d32;
+    -fx-font-weight: bold;
+}
+
+/* Error Label */
+.label-error {
+    -fx-text-fill: #c62828;
+    -fx-font-weight: bold;
+}
