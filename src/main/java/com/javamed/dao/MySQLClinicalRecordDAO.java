@@ -39,7 +39,23 @@ public class MySQLClinicalRecordDAO implements ClinicalRecordDAO {
             return false;
         }
     }
+    @Override
+    public boolean updateRecord(ClinicalRecord record) {
+    String sql = "UPDATE clinical_records SET diagnosis = ?, prescription = ?, clinical_notes = ? WHERE record_id = ?";
+    Connection conn = DatabaseManager.getInstance().getConnection();
 
+    try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+        stmt.setString(1, record.getDiagnosis());
+        stmt.setString(2, record.getPrescription());
+        stmt.setString(3, record.getClinicalNotes());
+        stmt.setInt(4, record.getRecordId());
+
+        return stmt.executeUpdate() > 0;
+    } catch (SQLException e) {
+        System.err.println("[MySQLClinicalRecordDAO] Update Error: " + e.getMessage());
+        return false;
+    }
+}
     @Override
     public List<ClinicalRecord> getRecordsForPatient(int patientId) {
         List<ClinicalRecord> list = new ArrayList<>();

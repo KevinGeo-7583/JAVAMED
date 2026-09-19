@@ -28,7 +28,7 @@ public class LoginController {
     private Role selectedRole = null;
 
     /**
-     * Called by RoleSelectionController to configure portal-specific state.
+     * Called by RoleSelectionController to configure portal-specific state before login screen is rendered.
      */
     public void setSelectedRole(Role role) {
         this.selectedRole = role;
